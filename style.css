@@ -1,0 +1,86 @@
+@import "https://fonts.googleapis.com/css2?family=PT+Sans&display=swap";
+
+body {
+	margin: 0;
+	font-family: "PT Sans", Arial, Helvetica, sans-serif;
+	background-color: hsl(240, 50%, 70%);
+}
+
+main {
+	width: 40%;
+	margin: 6em auto 0 auto;
+	padding: 1em;
+	box-sizing: border-box;
+	background-color: hsl(0, 0%, 95%);
+}
+
+fieldset {
+	border: none;
+	border-top: 2px solid black;
+	position: relative;
+	margin: 0;
+	margin-top: 3.5em;
+	padding: 0;
+}
+
+legend {
+	position:absolute;
+	top: -1.5em;
+	font-size: 150%;
+}
+
+.flex {
+	display: inline-flex;
+	justify-content: space-between;
+}
+
+.flex-g1 {
+	flex-basis: auto;
+}
+
+.flex-g2 {
+	flex-basis: 50%;
+}
+
+.flex-g3 {
+	flex-basis: 75%;
+}
+
+.inputGroup {
+	display: flex;
+	flex-direction: column;
+	margin: .4em 0 .5em 0;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+	background-color: inherit;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	border: 1px solid darkgrey;
+	padding: .1em .4em
+}
+
+input::placeholder {
+	color: inherit;
+	opacity: 1;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+label {
+	font-weight: 700;
+}

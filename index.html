@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Asynkron registreringsformular</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main>
+		<h1>Asynkron registreringsformular</h1>
+		<form id="registrationForm" novalidate>
+
+			<fieldset>
+				<legend>Navn</legend>
+				<div class="flex">
+					<div class="inputGroup flex-g1">
+						<label for="firstname">Fornavn(e)</label>
+						<input type="text" name="firstname" id="firstname" placeholder="Bent" aria-describedby="hintFirstname" required>
+						<p class="inputHint" id="hintFirstname" hidden>Skriv dit fornavn her</p>
+						<span class="statusMessage firstname"></span>
+					</div>
+		
+					<div class="inputGroup flex-g1">
+						<label for="lastname">Efternavn</label>
+						<input type="text" name="lastname" id="lastname" placeholder="Jensen" aria-describedby="hintLastname" required>
+						<p class="inputHint" id="hintLastname" hidden>Skriv dit efternavn her</p>
+						<span class="statusMessage lastname"></span>
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>Login</legend>
+				<div class="flex">
+
+					<div class="inputGroup">
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" placeholder="konto@adresse.dk" aria-describedby="hintEmail" required>
+						<p class="inputHint" id="hintEmail" hidden>Skriv din email her</p>
+						<span class="statusMessage email"></span>
+					</div>
+					<div class="inputGroup">
+						<label for="username">Brugernavn</label>
+						<input type="text" name="username" id="username" placeholder="bentjensen42" aria-describedby="hintUsername" required>
+						<p class="inputHint" id="hintUsername" hidden>Skriv dit brugernavn her</p>
+						<span class="statusMessage username"></span>
+					</div>
+					<div class="inputGroup">
+						<label for="password">Adgangskode</label>
+						<input type="password" name="password" id="password" aria-describedby="hintPassword" required>
+						<p class="inputHint" id="hintPassword" hidden>Skriv din adgangskode her</p>
+						<span class="statusMessage password"></span>
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>Adresse</legend>
+
+				<div class="flex">
+					<div class="inputGroup flex-g3">
+						<label for="street">Vejnavn</label>
+						<input type="text" name="street" id="street" placeholder="Åbyovrevej" aria-describedby="hintStreet" required>
+						<p class="inputHint" id="hintStreet" hidden>Skriv hvilken vej du bor på her</p>
+						<span class="statusMessage street"></span>
+					</div>
+	
+					<div class="inputGroup flex-g1">
+						<label for="number">Hus nr.</label>
+						<input type="text" name="number" id="number" placeholder="42" aria-describedby="hintNumber" required>
+						<p class="inputHint" id="hintNumber" hidden>Skriv hvilken nummer du bor i her</p>
+						<span class="statusMessage number"></span>
+					</div>
+					
+					<div class="inputGroup flex-g1">
+						<label for="floor">Etage</label>
+						<input type="number" name="floor" id="floor" placeholder="1" aria-describedby="hintFloor">
+						<p class="inputHint" id="hintFloor" hidden>Skriv hvilken etage du bor på her</p>
+						<span class="statusMessage floor"></span>
+					</div>
+				</div>
+				
+				<div class="flex">
+					<div class="inputGroup flex-g1">
+						<label for="zipcode">Postnr.</label>
+						<input type="number" name="zipcode" id="zipcode" placeholder="2800" aria-describedby="hintZipcode" required>
+						<p class="inputHint" id="hintZipcode" hidden>Skriv dit postnummer her</p>
+						<span class="statusMessage zipcode"></span>
+					</div>
+	
+					<div class="inputGroup flex-g3">
+						<label for="city">By</label>
+						<input type="text" name="city" id="city" placeholder="København NV." aria-describedby="hintCity" required>
+						<p class="inputHint" id="hintCity" hidden>Skriv navnet på din by her</p>
+						<span class="statusMessage city"></span>
+					</div>
+				</div>
+			</fieldset>
+			<button type="submit">Opret konto</button>
+		</form>
+	</main>
+	<script src="app.js" type="module" defer></script>
+</body>
+</html>
